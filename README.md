@@ -1,6 +1,6 @@
 # n-display-metadata
 
-[![CircleCI](https://img.shields.io/circleci/project/github/Financial-Times/n-display-metadata/master.svg)](https://circleci.com/gh/Financial-Times/n-display-metadata) [![NPM version](https://img.shields.io/npm/v/@financial-times/n-display-metadata.svg)](https://www.npmjs.com/package/@financial-times/n-display-metadata)
+[![CircleCI](https://img.shields.io/circleci/project/github/Financial-Times/n-display-metadata/main.svg)](https://circleci.com/gh/Financial-Times/n-display-metadata) [![NPM version](https://img.shields.io/npm/v/@financial-times/n-display-metadata.svg)](https://www.npmjs.com/package/@financial-times/n-display-metadata)
 
 This module encapsulates the editorially selected logic for deciding which metadata items to display in teasers and article toppers.
 
@@ -31,8 +31,8 @@ const teaserMetadata = metadata.teaser(content);
 References to the variable `content` refer to a content item either from the [internal enriched content API][1] or the [FT.com Elasticsearch cluster][2]. The content should have an `annotations` property (which is an array of concepts and their relationship to the content) and `containedIn` property (which is an array of packages which contain the content).
 
 [teaser]: https://github.com/Financial-Times/o-teaser/
-[1]: https://github.com/Financial-Times/types-ft-content-api/tree/master/content
-[2]: https://github.com/Financial-Times/next-es-interface/tree/master/server/schemas/types
+[1]: https://github.com/Financial-Times/types-ft-content-api/tree/main/content
+[2]: https://github.com/Financial-Times/next-es-interface/tree/main/server/schemas/types
 
 
 ## API
@@ -57,4 +57,4 @@ Both teasers and toppers are capable of displaying two pieces of metadata:- a pr
 
 The logic for choosing which metadata to display on teasers was last decided by Mus and Guy on 28/08/2018 and implemented by Matt Hinchliffe on 29/08/2018.
 
-The current decision trees can be seen in the [docs folder](https://github.com/Financial-Times/n-display-metadata/blob/master/docs/)
+The current decision trees can be seen in the [docs folder](https://github.com/Financial-Times/n-display-metadata/blob/main/docs/)
