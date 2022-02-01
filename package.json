@@ -3,26 +3,36 @@
   "version": "0.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "make test",
-    "precommit": "node_modules/.bin/secret-squirrel",
-    "commitmsg": "node_modules/.bin/secret-squirrel-commitmsg",
-    "prepush": "make verify -j3",
-    "prepare": "npx snyk protect || npx snyk protect -d || true"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "@financial-times/n-gage": "^3.6.0",
+    "@financial-times/n-gage": "^8.3.2",
     "chai": "^4.1.2",
     "mocha": "^6.0.0",
     "mocha-junit-reporter": "^1.17.0",
     "mocha-multi-reporters": "^1.1.7",
     "snyk": "^1.167.2"
   },
-  "engine": {
-    "node": ">= 6.0.0"
+  "scripts": {
+    "test": "make test",
+    "prepare": "npx snyk protect || npx snyk protect -d || true",
+    "preinstall": "npm_config_yes=true npx check-engine"
+  },
+  "engines": {
+    "node": "12.x",
+    "npm": "7.x"
+  },
+  "volta": {
+    "node": "12.22.9",
+    "npm": "7.24.2"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "node_modules/.bin/secret-squirrel-commitmsg",
+      "pre-commit": "node_modules/.bin/secret-squirrel",
+      "pre-push": "make test && make verify -j3"
+    }
   }
 }
