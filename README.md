@@ -6,7 +6,7 @@ This module encapsulates the editorially selected logic for deciding which metad
 
 ## Installation
 
-This is a [Node.js][node] module available through the [npm][npm] registry. Before installing, download and install Node.js. Node.js 12 or higher is required.
+This is a [Node.js][node] module available through the [npm][npm] registry. Before installing, download and install Node.js. Node.js 18 or higher is required.
 
 Installation is done using the [npm install][install] command:
 
